@@ -8,7 +8,3 @@
 
 ## About pixelSite
 This is a sample code which uses several plugins to acquire the needed result.
-
-## License
-
-This creation is built in with laravel and this is an open-sourced repo licensed under the [MIT license](https://opensource.org/licenses/MIT).
