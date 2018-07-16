@@ -1,0 +1,797 @@
+/* ==========================================================================
+   CSS for testWebsite
+   Author: Abner Morales RamÃÂ­rez
+   Date: 10/05/2018
+   Version: 1.0
+   Email: developer@abnermoralesr.com
+   
+   ####IMPORTANT####
+   This website was developed with the help of plugins and libraries found in the web, I used their HTML structure and builtin functions to develop the website faster, for furhter information please check the links 
+   bellow	:
+   JQuery: https://jquery.com/
+   Bootstrap: https://getbootstrap.com/getting-started/
+   OWL Carrousel 2: https://owlcarousel2.github.io/OwlCarousel2/docs/started-welcome.html
+   Responsie Tabs: External https://github.com/jellekralt/Responsive-Tabs
+   Bootstrap kenburns slider effect extension: https://www.jqueryscript.net/slideshow/jQuery-Extension-To-Add-Ken-Burns-Effect-To-Bootstrap-Carousel.html
+   Animated menu icon: https://mdbootstrap.com/components/bootstrap-hamburger-menu/
+   The favicons for the website where generated at:
+   https://www.favicon-generator.org/
+   ========================================================================== */
+
+/**
+ * INDEX:
+ *
+ * 0. OVERALL SETTINGS
+ * 1. HEADER
+ * 2. HISTORY
+ * 3. CLIMBING
+ * 4. TABS
+ * 5. FOOTER
+ * 6. RESPONSIVE
+ *
+ */
+
+ 
+/* ==========================================================================
+   * 0. OVERALL SETTINGS
+   ========================================================================== */
+   *{
+	   font-family: 'Oswald', sans-serif;
+	  }
+header{
+     font-family: 'Lato', sans-serif !important;
+}
+ .bgImage{
+     background-size: 100%;
+     background-position:center center;
+     background-repeat:no-repeat;
+}
+ .height250{
+     height: 250px;
+}
+ .height100{
+     height: 100px;
+}
+ .height25 {
+     height: 25px;
+}
+ .italic{
+     font-style: italic;
+     font-family: 'PT Sans', sans-serif;
+}
+p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* ==========================================================================
+   * 1. HEADER
+   ========================================================================== */
+ nav.navbar{
+     transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -webkit-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+}
+div#theNav {
+    width: 50%;
+}
+#theNav.navbar-collapse .collapse {
+     height: 0px !important;
+     display: none !important;
+}
+ a.navbar-brand {
+     height: auto;
+}
+ .navbar-toggler {
+     position: absolute;
+     top: 21px !important;
+     background: transparent;
+     border: none;
+     right: 32px;
+     height: 40px;
+     display:none;
+}
+ .navbar-toggler:hover, .navbar-toggler:focus, .navbar-toggler:active {
+     border: none !important;
+     outline: none;
+}
+.animated-icon1 {
+     width: 30px;
+     height: 20px;
+     position: relative;
+     margin: 0px;
+     display: block;
+     -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     transform: rotate(0deg);
+     -webkit-transition: .5s ease-in-out;
+     -moz-transition: .5s ease-in-out;
+     -o-transition: .5s ease-in-out;
+     transition: .5s ease-in-out;
+}
+.animated-icon1 span {
+     display: block;
+     position: absolute;
+     height: 3px;
+     width: 100%;
+     border-radius: 9px;
+     opacity: 1;
+     left: 0;
+     -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     transform: rotate(0deg);
+     -webkit-transition: .25s ease-in-out;
+     -moz-transition: .25s ease-in-out;
+     -o-transition: .25s ease-in-out;
+     transition: .25s ease-in-out;
+}
+.animated-icon1 span {
+     background: #535f74;
+}
+ .animated-icon1 span:nth-child(1) {
+     top: 0px;
+}
+ .animated-icon1 span:nth-child(2) {
+     top: 10px;
+}
+ .animated-icon1 span:nth-child(3) {
+     top: 20px;
+}
+.animated-icon1.open span:nth-child(1) {
+     top: 11px;
+     -webkit-transform: rotate(135deg);
+     -moz-transform: rotate(135deg);
+     -o-transform: rotate(135deg);
+     transform: rotate(135deg);
+}
+ .animated-icon1.open span:nth-child(2) {
+     opacity: 0;
+     left: -60px;
+}
+.animated-icon1.open span:nth-child(3) {
+     top: 11px;
+     -webkit-transform: rotate(-135deg);
+     -moz-transform: rotate(-135deg);
+     -o-transform: rotate(-135deg);
+     transform: rotate(-135deg);
+}
+ .navbar-nav>li>a {
+	 font-family: 'Lato', sans-serif !important;
+     color: #fff;
+     font-style: italic;
+     text-transform: uppercase;
+     font-weight: bold;
+     position: relative;
+     transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -webkit-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+}
+ .navbar-nav>li>a:before {
+     content: " ";
+     position: absolute;
+     bottom: 11px;
+     width: 83%;
+     height: 1px;
+     background: #fff;
+}
+ nav.navbar.navbar-fixed-top.sticky {
+     background: #fff;
+}
+ nav.navbar.navbar-fixed-top.sticky a {
+     color: #414F72;
+     font-style: initial !important;
+     transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -webkit-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+}
+ nav.navbar.navbar-fixed-top.sticky a:before {
+     background: #414f6b;
+     transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -webkit-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+}
+ nav.navbar a:hover, nav.navbar a:focus, nav.navbar a:active {
+     background: none !important;
+}
+ nav.navbar.navbar-fixed-top.sticky .logo{
+     opacity: 0;
+}
+ img.logo {
+     width: 50px;
+     transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+     -webkit-transition: all 0.5s ease;
+     -o-transition: all 0.5s ease;
+}
+ img.logo.stickyLogo {
+     width: 100%;
+     position: absolute;
+     top: 8px;
+     left: 9px;
+     transition: all 0.7s ease;
+     -moz-transition: all 0.7s ease;
+     -webkit-transition: all 0.7s ease;
+     -o-transition: all 0.7s ease;
+}
+ nav.navbar.navbar-fixed-top.sticky .logo.stickyLogo{
+     opacity: 1;
+}
+ a.navbar-brand {
+     position: relative;
+     width: 188px;
+}
+ img.logo.stickyLogo {
+     opacity: 0;
+}
+ ul.nav.navbar-nav.pull-right {
+     padding-top: 10px;
+}
+
+/* ==========================================================================
+   * 2. HISTORY
+   ========================================================================== */
+ section#history{
+     background-image: url("../images/history.jpg");
+}
+ .mainTitle {
+     margin-top: 50px;
+}
+ .mainTitle h1 {
+     font-size: 124px;
+     color: #535f74;
+     font-weight: bold;
+}
+ span.smallCaps {
+     font-size: 30px;
+     margin-top: -10px;
+     position: absolute;
+     bottom: 38px;
+     left: 116px;
+     font-weight: bold;
+     color: #414f6b;
+     text-transform: uppercase;
+}
+ .mainTitle h1 {
+     position: relative;
+     font-family: 'Oswald', sans-serif;
+}
+ .padding100 {
+     padding-left: 100px;
+     margin-bottom: 300px;
+}
+ .cbackground {
+     padding-top: 20px;
+     padding-bottom: 20px;
+     background: rgba(65, 79, 107, .8);
+     border-top: solid 1px #fff;
+}
+ .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+     background: #fff;
+}
+ .height150{
+     height: 100px;
+}
+
+/* ==========================================================================
+   * 3. CLIMBING
+   ========================================================================== */
+ #team span.smallCaps {
+     left: 140px;
+}
+ #team p.col-md-8.col-md-offset-1.col-sm-12 {
+     margin-top: 68px;
+}
+ #team .mainTitle {
+     margin: 0px;
+}
+
+/* ==========================================================================
+   * 4. TABS
+   ========================================================================== */
+ section#accordion {
+     margin-top: 10px;
+}
+ ul.container.r-tabs-nav {
+     margin: auto;
+}
+ div#horizontalTab {
+     background: #535f74;
+     text-transform: uppercase;
+}
+ div#horizontalTab a {
+     color: #b0b4be;
+     font-weight: bolder;
+     font-size: 26px;
+     display: block;
+     padding-top: 11px;
+     padding-bottom: 11px;
+     padding-left: 11px;
+     padding-right: 11px;
+}
+ li.r-tabs-tab.r-tabs-state-active a {
+     background: #b0b4be;
+     color:#535f74 !important;
+}
+ div#horizontalTab a:hover {
+     text-decoration: none;
+}
+ #tab-1{
+     background-image: url("../images/tab1.png");
+}
+ #tab-2{
+     background-image: url("../images/tab2.png");
+}
+ .schedules {
+     background: rgba(255,255,255,.8);
+     padding: 24px;
+}
+ .schedules h2 {
+     font-size: 39px;
+     font-weight: bold;
+     margin: 0px;
+     margin-bottom: 20px;
+}
+ .schedules {
+     color: #414f6b;
+}
+.schedules .col-md-6.col-sm-12 {
+    text-transform: none;
+    font-family: 'PT Sans', sans-serif;
+}
+/* ==========================================================================
+   * 5. FOOTER
+   ========================================================================== */
+ footer {
+     padding-top: 25px;
+     padding-bottom: 25px;
+     background: #414f6b;
+}
+ footer p {
+     margin-top: 15px;
+     color: #b0b4be;
+}
+
+/* ==========================================================================
+   * 6. RESPONSIVE
+   ========================================================================== */
+     @media all and (max-width: 1024px){
+		 
+/* ==========================================================================
+   * 0. OVERALL SETTINGS RESPONSIVE 1024 AND BELLOW
+   ========================================================================== */		 
+		 
+         .bgImage{
+             background-size:cover;
+        }
+		
+	 }   
+     @media all and (max-width: 900px){
+		 
+/* ==========================================================================
+   * 0. OVERALL SETTINGS RESPONSIVE 900px AND BELLOW
+   ========================================================================== */		 
+		 
+         .schedules {
+             text-align: center;
+        }
+		.padding100 {
+			padding-left: 24px;
+		}
+/* ==========================================================================
+   * 1. HEADER RESPONSIVE 900px AND BELLOW
+   ========================================================================== */		 
+         a.navbar-brand {
+             width: 200px !important;
+             display: block;
+        }
+         .navbar-toggler {
+             display:block !important;
+             width: 40px !important;
+             height:  40px !important;
+        }
+         ul.nav.navbar-nav.pull-right {
+             float: none !important;
+             width: 100%;
+        }
+         ul.nav.navbar-nav.pull-right li {
+             width: 100%;
+             text-align: center;
+             margin: 0px;
+        }
+         .navbar-nav>li>a:before {
+             width: 100%;
+             left: 0px;
+        }
+         a.navbar-brand {
+             margin: auto;
+             float: none;
+        }
+         div#theNav.collapse {
+             display: none !important;
+        }
+         div#theNav.collapse.in {
+             display: block !important;
+        }
+         ul.nav.navbar-nav.pull-right {
+             width: 100% !important;
+             float: none !important;
+             margin: 0px;
+        }
+         .navbar-nav>li>a {
+             width: 100% !important;
+             display: block;
+             float: none;
+        }
+         div#theNav {
+             width: 100% !important;
+             margin: 0px;
+        }
+         .navbar-nav>li {
+             float: none;
+             text-align: center;
+        }
+         .navbar-nav>li>a:before {
+             left: 0px;
+             width: 100%;
+        }
+         img.logo {
+             margin: auto;
+        }		
+		
+/* ==========================================================================
+   * 3. CLIMBING RESPONSIVE 900px AND BELLOW
+   ========================================================================== */		 		
+         #team p.col-md-8.col-md-offset-1.col-sm-12{
+             margin-top:0px;
+        }
+		
+/* ==========================================================================
+   * 5. FOOTER RESPONSIVE 900px AND BELLOW
+   ========================================================================== */		 				
+         footer div{
+             text-align:center !important;
+        }
+    }
+	
+ @media all and (max-width: 768px){
+     #team p.col-md-8.col-md-offset-1.col-sm-12{
+         margin-top:0px;
+    }
+     .bgImage{
+         background-size:cover;
+    }
+     .schedules {
+         text-align: center;
+    }
+     footer div{
+         text-align:center !important;
+    }
+     ul.nav.navbar-nav.pull-right {
+         float: none !important;
+         width: 100%;
+    }
+     ul.nav.navbar-nav.pull-right li {
+         width: 100%;
+         text-align: center;
+         margin: 0px;
+    }
+     .navbar-nav>li>a:before {
+         width: 100%;
+         left: 0px;
+    }
+     a.navbar-brand {
+         margin: auto;
+         float: none;
+    }
+     img.logo {
+         margin: auto;
+    }
+     *{
+         font-family: 'Lato', sans-serif;
+    }
+    /** ** Header **/
+     nav.navbar{
+         transition: all 0.5s ease;
+         -moz-transition: all 0.5s ease;
+         -webkit-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+    }
+     #theNav.navbar-collapse .collapse {
+         height: 0px !important;
+         display: none !important;
+    }
+     a.navbar-brand {
+         height: auto;
+    }
+     .navbar-toggler {
+         position: absolute;
+         top: 18px !important;
+         background: transparent;
+         border: none;
+    }
+     .navbar-toggler:hover, .navbar-toggler:focus, .navbar-toggler:active {
+         border: none !important;
+         height: 40px;
+    }
+     .animated-icon1 {
+         width: 30px;
+         height: 20px;
+         position: relative;
+         margin: 0px;
+         -webkit-transform: rotate(0deg);
+         -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+         transform: rotate(0deg);
+         -webkit-transition: .5s ease-in-out;
+         -moz-transition: .5s ease-in-out;
+         -o-transition: .5s ease-in-out;
+         transition: .5s ease-in-out;
+         cursor: pointer;
+    }
+     .animated-icon1 span {
+         display: block;
+         position: absolute;
+         height: 3px;
+         width: 100%;
+         border-radius: 9px;
+         opacity: 1;
+         left: 0;
+         -webkit-transform: rotate(0deg);
+         -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+         transform: rotate(0deg);
+         -webkit-transition: .25s ease-in-out;
+         -moz-transition: .25s ease-in-out;
+         -o-transition: .25s ease-in-out;
+         transition: .25s ease-in-out;
+    }
+     .animated-icon1 span {
+         background: #333f55;
+    }
+     .animated-icon1 span:nth-child(1) {
+         top: 0px;
+    }
+     .animated-icon1 span:nth-child(2) {
+         top: 10px;
+    }
+     .animated-icon1 span:nth-child(3) {
+         top: 20px;
+    }
+     .animated-icon1.open span:nth-child(1) {
+         top: 11px;
+         -webkit-transform: rotate(135deg);
+         -moz-transform: rotate(135deg);
+         -o-transform: rotate(135deg);
+         transform: rotate(135deg);
+    }
+     .animated-icon1.open span:nth-child(2) {
+         opacity: 0;
+         left: -60px;
+    }
+     .animated-icon1.open span:nth-child(3) {
+         top: 11px;
+         -webkit-transform: rotate(-135deg);
+         -moz-transform: rotate(-135deg);
+         -o-transform: rotate(-135deg);
+         transform: rotate(-135deg);
+    }
+     .navbar-nav>li>a {
+         color: #fff;
+         font-style: italic;
+         text-transform: uppercase;
+        /* text-decoration: underline;
+         */
+         font-weight: bold;
+         position: relative;
+         transition: all 0.5s ease;
+         -moz-transition: all 0.5s ease;
+         -webkit-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+    }
+     .navbar-nav>li>a:before {
+         width: 100%;
+    }
+     nav.navbar.navbar-fixed-top.sticky {
+         background: #fff;
+    }
+     nav.navbar.navbar-fixed-top.sticky a {
+         color: #414F72;
+         font-style: initial !important;
+         transition: all 0.5s ease;
+         -moz-transition: all 0.5s ease;
+         -webkit-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+    }
+     nav.navbar.navbar-fixed-top.sticky a:before {
+         background: #414f6b;
+         transition: all 0.5s ease;
+         -moz-transition: all 0.5s ease;
+         -webkit-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+    }
+     nav.navbar a:hover, nav.navbar a:focus, nav.navbar a:active {
+         background: none !important;
+    }
+     nav.navbar.navbar-fixed-top.sticky .logo{
+         opacity: 0;
+    }
+     img.logo {
+         width: 50px;
+         transition: all 0.5s ease;
+         -moz-transition: all 0.5s ease;
+         -webkit-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+    }
+     img.logo.stickyLogo {
+         width: 100%;
+         position: absolute;
+         top: 8px;
+         left: 9px;
+         transition: all 0.7s ease;
+         -moz-transition: all 0.7s ease;
+         -webkit-transition: all 0.7s ease;
+         -o-transition: all 0.7s ease;
+    }
+     nav.navbar.navbar-fixed-top.sticky .logo.stickyLogo{
+         opacity: 1;
+    }
+     a.navbar-brand {
+         position: relative;
+         width: 188px;
+    }
+     img.logo.stickyLogo {
+         opacity: 0;
+    }
+     .bgImage{
+         background-size: cover;
+         background-position:center center;
+         background-repeat:no-repeat;
+    }
+     ul.nav.navbar-nav.pull-right {
+         padding-top: 10px;
+    }
+    /** ** 01. History **/
+     section#history{
+         background-image: url("../images/history.jpg");
+    }
+     .mainTitle {
+         margin-top: 50px;
+    }
+     .mainTitle h1 {
+         font-size: 124px;
+         color: #535f74;
+         font-weight: bold;
+    }
+     span.smallCaps {
+         font-size: 30px;
+         margin-top: -10px;
+         position: absolute;
+         bottom: 38px;
+         left: 116px;
+         font-weight: bold;
+         color: #414f6b;
+         text-transform: uppercase;
+    }
+     .mainTitle h1 {
+         position: relative;
+         font-family: 'Oswald', sans-serif;
+    }
+     .padding100 {
+         padding-left: 100px;
+         margin-bottom: 300px;
+    }
+     .cbackground {
+         padding-top: 20px;
+         padding-bottom: 20px;
+         background: rgba(65, 79, 107, .8);
+         border-top: solid 1px #fff;
+    }
+     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+         background: #fff;
+    }
+     .height150{
+         height: 100px;
+    }
+     #team span.smallCaps {
+         left: 140px;
+    }
+     #team p.col-md-8.col-md-offset-1.col-sm-12 {
+         /* margin-top: 68px; */
+    }
+     #team .mainTitle {
+         margin: 0px;
+    }
+     section#accordion {
+         margin-top: 10px;
+    }
+     ul.container.r-tabs-nav {
+         margin: auto;
+    }
+     li.r-tabs-state-default.r-tabs-tab {
+        /* padding: 15px;
+         */
+    }
+     div#horizontalTab {
+         background: #535f74;
+         text-transform: uppercase;
+    }
+     div#horizontalTab a {
+         color: #b0b4be;
+         font-weight: bolder;
+         font-size: 26px;
+        /* font-style: italic;
+         */
+         display: block;
+         padding-top: 11px;
+        /* margin-top: -11px;
+         */
+         padding-bottom: 11px;
+         padding-left: 11px;
+         padding-right: 11px;
+    }
+     li.r-tabs-tab.r-tabs-state-active a {
+         background: #b0b4be;
+         color:#535f74 !important;
+    }
+     div#horizontalTab a:hover {
+         text-decoration: none;
+    }
+     #tab-1{
+         background-image: url("../images/tab1.png");
+         z-index: 999999;
+    }
+     #tab-2{
+         background-image: url("../images/tab2.png");
+    }
+     .height250{
+         height: 250px;
+    }
+     .height100{
+         height: 100px;
+    }
+     .height50 {
+         height: 25px;
+    }
+     .schedules {
+         background: rgba(255,255,255,.8);
+         padding: 24px;
+    }
+     .schedules h2 {
+         font-size: 39px;
+         font-weight: bold;
+        /* color: #414f6b;
+         */
+         margin: 0px;
+         margin-bottom: 20px;
+    }
+     .schedules {
+         color: #414f6b;
+    }
+     footer {
+         padding-top: 25px;
+         padding-bottom: 25px;
+         background: #414f6b;
+    }
+     footer p {
+         margin-top: 15px;
+         color: #b0b4be;
+    }
+     .italic{
+         font-style: italic;
+    }
+	
+     @media all and (max-width: 320px){
+		 
+/* ==========================================================================
+   * 1. HEADER RESPONSIVE 320px AND BELLOW
+   ========================================================================== */		 		 
+         .navbar-toggler {
+             right: 7px;
+        }
+    }
+     
